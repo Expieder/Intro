@@ -1,116 +1,153 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Sparkles, MapPin, Users, Compass, Smartphone } from "lucide-react";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expieder - Spatial Social Connection</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', 'Helvetica Neue', sans-serif;
+      background: linear-gradient(135deg, #f0f4ff, #fdfcfe);
+      color: #222;
+      line-height: 1.6;
+      padding: 0 20px;
+    }
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #5B21B6;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+    section {
+      max-width: 900px;
+      background: #fff;
+      margin: 20px auto 60px;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #2c2c2c;
+    }
+    section h3 {
+      font-size: 1.4rem;
+      margin-top: 30px;
+      color: #444;
+    }
+    section p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      padding: 40px 20px;
+    }
+    .highlight {
+      color: #7C3AED;
+      font-weight: bold;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      background: linear-gradient(135deg, #7C3AED, #5B21B6);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(91, 33, 182, 0.3);
+    }
+    .btn:hover {
+      background: linear-gradient(135deg, #5B21B6, #4C1D95);
+      box-shadow: 0 6px 16px rgba(76, 29, 149, 0.4);
+      transform: translateY(-2px);
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
 
-export default function ExpiederLandingPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-800 via-indigo-700 to-teal-600 text-white p-8">
-      <div className="max-w-6xl mx-auto space-y-16">
-        {/* Hero Section */}
-        <section className="text-center space-y-6">
-          <motion.h1
-            initial={{ opacity: 0, y: -40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2 }}
-            className="text-5xl font-extrabold leading-tight tracking-wide text-shadow-lg"
-          >
-            🌍 Welcome to Expieder
-          </motion.h1>
-          <p className="text-2xl font-light max-w-xl mx-auto">
-            The world’s first social spatial interaction platform — bringing the power of Augmented Reality to how we connect, explore, and communicate.
-          </p>
-        </section>
+<body>
 
-        {/* Reimagining Connection Section */}
-        <section className="grid md:grid-cols-2 gap-10 items-center">
-          <div className="space-y-4">
-            <h2 className="text-3xl font-semibold text-center">👋 Reimagining Connection</h2>
-            <p className="text-xl text-center">Expieder brings people together in the real world — not just through likes and comments, but through spatial experiences that unfold in real time and place.</p>
-            <p className="text-xl text-center mt-2">This is where social starts outside.</p>
-          </div>
-          <Card className="bg-zinc-800 shadow-lg hover:shadow-2xl transition-shadow duration-300">
-            <CardContent className="p-8 space-y-3">
-              <p className="text-lg">🌱 Be present, not just online.</p>
-              <p className="text-lg">🚶‍♀️ Move through the world, leave digital traces.</p>
-              <p className="text-lg">🌐 Explore social layers around you.</p>
-            </CardContent>
-          </Card>
-        </section>
+<header>
+  <h1>✨ Welcome to Expieder</h1>
+  <p>The world’s first social spatial interaction platform.</p>
+</header>
 
-        {/* What is Expieder Section */}
-        <section className="space-y-8">
-          <h2 className="text-3xl font-semibold text-center">✨ What is Expieder?</h2>
-          <p className="text-lg text-center max-w-2xl mx-auto">
-            Expieder is an Augmented Reality platform that enables spatial social interactions — starting with your smartphone. Pin and discover digital content like messages, media, and profiles — all tied to real-world locations.
-          </p>
-        </section>
+<section>
+  <h2>👋 Reimagining Connection</h2>
+  <p>Expieder brings people together through spatial experiences in the real world — not just likes or swipes.</p>
+  <p>Primarily, it's a place to make new connections outdoors — by being present.</p>
 
-        {/* Features Section */}
-        <section className="grid md:grid-cols-3 gap-6">
-          <Card className="bg-zinc-800 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-            <CardContent className="p-6 text-center">
-              <MapPin className="mx-auto mb-4 text-4xl text-yellow-500" />
-              <h3 className="font-semibold text-xl">📍 Spatial Pinning</h3>
-              <p>Drop messages, media, memories at real-world locations.</p>
-            </CardContent>
-          </Card>
+  <h2>✨ What is Expieder?</h2>
+  <p>An Augmented Reality platform enabling spatial social interactions. Pin and discover digital content — messages, media, profiles — all tied to real-world locations.</p>
 
-          <Card className="bg-zinc-800 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-            <CardContent className="p-6 text-center">
-              <Compass className="mx-auto mb-4 text-4xl text-green-500" />
-              <h3 className="font-semibold text-xl">🧭 Explore with AR</h3>
-              <p>Use your camera to see content layered in real time.</p>
-            </CardContent>
-          </Card>
+  <h2>🔍 Discover Social Layers Around You</h2>
+  <ul>
+    <li>Explore Instagram posts and reels around you.</li>
+    <li>Stumble upon art in a park.</li>
+    <li>Find a pinned Spotify playlist on a rooftop.</li>
+  </ul>
+  <p><span class="highlight">Social media becomes spatial — woven into the real world.</span></p>
 
-          <Card className="bg-zinc-800 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-            <CardContent className="p-6 text-center">
-              <Users className="mx-auto mb-4 text-4xl text-pink-500" />
-              <h3 className="font-semibold text-xl">🔗 Social Layer</h3>
-              <p>Find Instagram posts, Spotify playlists, public profiles pinned nearby.</p>
-            </CardContent>
-          </Card>
-        </section>
+  <h2>🚀 How It Works</h2>
+  <ul>
+    <li><strong>Spatial Pinning:</strong> Drop content at real-world locations.</li>
+    <li><strong>Explore with AR:</strong> Use your camera to discover layers around you.</li>
+    <li><strong>Social Layer:</strong> Find Instagram, Spotify, and profiles pinned nearby.</li>
+  </ul>
 
-        {/* Why Now Section */}
-        <section className="space-y-8 text-center">
-          <h2 className="text-3xl font-semibold">🌱 Why Now?</h2>
-          <p className="text-lg max-w-3xl mx-auto">
-            Today’s generation craves real, spontaneous interaction. Expieder delivers exactly that — shared experiences in space and time.
-          </p>
-        </section>
+  <h2>🌱 Why Now?</h2>
+  <p>Today's generation craves real, spontaneous interaction — Expieder delivers shared spatial experiences, not just digital feeds.</p>
 
-        {/* XR Section */}
-        <section className="space-y-8 text-center">
-          <h2 className="text-3xl font-semibold">🥽 XR Is Coming — We’re Already There</h2>
-          <p className="text-lg max-w-3xl mx-auto">
-            Today: On your smartphone. Tomorrow: On AR wearables. Future: Full mixed-reality social worlds. Expieder is laying the foundation for spatial computing, where digital presence lives inside the physical world.
-          </p>
-        </section>
+  <h2>🕶️ XR Is Coming — We’re Already There</h2>
+  <p>Today: On your smartphone.<br>
+     Tomorrow: On AR wearables.<br>
+     Future: Full mixed-reality worlds.</p>
 
-        {/* Differentiator Section */}
-        <section className="space-y-8 text-center">
-          <h2 className="text-3xl font-semibold">🔥 What Makes Expieder Different</h2>
-          <p className="text-lg max-w-3xl mx-auto">
-            Most treat AR as a gimmick. Expieder makes it the medium for real human connection. Social mapped to space and time. We’re not building another app to scroll through — we’re building a reason to go outside and be present.
-          </p>
-        </section>
+  <h2>🔥 What Makes Expieder Different</h2>
+  <p>We treat AR as a <span class="highlight">social medium</span> — not a gimmick. Expieder creates real-time, location-based, human interactions.</p>
 
-        {/* Start Now Section */}
-        <section className="text-center space-y-6">
-          <Smartphone className="mx-auto text-6xl text-teal-400" />
-          <h2 className="text-3xl font-semibold">📲 Start Now</h2>
-          <p className="text-lg max-w-2xl mx-auto">Open your phone. Enter AR mode. Watch the real world come alive.</p>
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white text-lg py-3 px-8 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300">
-            Join the Movement
-          </Button>
-        </section>
+  <h2>🌎 A Platform to Form New Connections</h2>
+  <p>Connect outdoors. Move. Explore. Discover pre-loaded content — your environment is already alive!</p>
 
-        <footer className="text-center text-sm text-zinc-400 pt-10">
-          ✨ Expieder — The bridge between digital presence and physical connection.
-        </footer>
-      </div>
-    </div>
-  );
-}
+  <h2>🎯 Communities Where Expieder Comes to Play</h2>
+  <ul>
+    <li>Gamers: Outdoor collaborations.</li>
+    <li>Writers & Artists: Share your creations.</li>
+    <li>Travellers: Meet others on the same path.</li>
+    <li>Businesses: Promote real-world offers and events.</li>
+  </ul>
+
+  <h2>📲 Start Now</h2>
+  <p>Open your phone.<br> Enter AR mode.<br> Watch the real world come alive.</p>
+
+  <p><span class="highlight">Be part of the new social movement.</span></p>
+  <a class="btn" href="#">Join Expieder</a>
+</section>
+
+<footer>
+  <p>© 2025 Expieder. Bridging digital presence and physical connection.</p>
+</footer>
+
+</body>
+</html>
